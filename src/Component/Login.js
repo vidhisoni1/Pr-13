@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
-import { app } from '../Firebase/firebase'
+import { app } from '../Firebase/Firebase'
 
 
-const Signup = ({ logIn, setLogIn }) => {
+const Login = ({ logIn, setLogIn }) => {
     const initialInput = { email: '', password: '' }
     const [input, setInput] = useState(initialInput)
     const [errors, setErrors] = useState({})
@@ -88,7 +88,7 @@ const Signup = ({ logIn, setLogIn }) => {
                 <div className="mb-4">
                     <label htmlFor="password" className="block">Password :</label>
                     <input type="password" id="password" name="password" value={input.password} onChange={handleChange} className="form-control" placeholder='Enter your password' />
-                    {/* <p className='text-red-400'>{errors.password}</p> */}
+                    <p className='text-danger'>{errors.password}</p>
                 </div>
                 <div className="mb-6">
                     <input type="submit" defaultValue="Sign Up" className="btn btn-success form-control mb-2" />
@@ -101,5 +101,4 @@ const Signup = ({ logIn, setLogIn }) => {
     )
 }
 
-export default Signup
- 
+export default Login

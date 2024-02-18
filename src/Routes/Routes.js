@@ -4,7 +4,7 @@ import { app } from '../Firebase/Firebase'
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 
-const Routes = ({ res, logIn, setLogIn }) => {
+const Routes = ({ Cmp, logIn, setLogIn }) => {
     const navigate = useNavigate()
     useEffect(() => {
         const auth = getAuth(app);
@@ -25,9 +25,8 @@ const Routes = ({ res, logIn, setLogIn }) => {
     }, [logIn])
 
     return (
-        res
+        Cmp
     )
-
 }
 
 export default Routes

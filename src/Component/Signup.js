@@ -1,8 +1,7 @@
-import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
-import { app } from '../Firebase/firebase'
+import { app } from '../Firebase/Firebase'
 
 
 const Signup = ({ logIn, setLogIn }) => {
@@ -116,4 +115,4 @@ const Signup = ({ logIn, setLogIn }) => {
 }
 
 export default Signup
- 
+

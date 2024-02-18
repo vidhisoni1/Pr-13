@@ -1,7 +1,5 @@
-import axios from 'axios'
-// import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { app } from '../Firebase/firebase'
+import { app } from '../Firebase/Firebase'
 import { getAuth, signOut } from 'firebase/auth'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -40,4 +38,3 @@ const Header = ({ logIn, setLogIn }) => {
 }
 
 export default Header
- 
